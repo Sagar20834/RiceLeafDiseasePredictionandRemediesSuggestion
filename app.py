@@ -47,7 +47,7 @@ def predict_with_models(models, rice_plant):
     pred_index = np.argmax(np.mean(results, axis=0))  # Take the index with the highest average probability
     
     if pred_index < len(model_names):  # Check if the index is within the range of model_names
-        selected_model = model_names[pred_index]  # Get the name of the selected model
+        selected_model = model_names[pred_index]  # Get the name of the selected model of the array list
     else:
         selected_model = "new.h5"
     
