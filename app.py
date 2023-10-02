@@ -90,7 +90,7 @@ def predict():
 
         if not is_valid_image(file_path):
             os.remove(file_path)  # Remove the invalid image
-            flash("Please upload a 150x150 pixel image.")
+            flash("Please upload a Rice Plant Image.")
             return redirect(url_for('index'))  # Redirect to the page where the user uploads an image
 
         print("@@ Predicting class...")

@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = 'empty-project-type'
-recent_files = ['app.py', 'templates\\BrownSpot_plant.html', 'templates\\healthy_plant_leaf.html', 'templates\\Hispa.html', 'templates\\index.html', 'templates\\index1.html', 'templates\\LeafBlast.html']
+recent_files = ['app.py', 'templates\\index.html', 'templates\\BrownSpot_plant.html', 'templates\\LeafBlast.html', 'templates\\Hispa.html', 'templates\\healthy_plant_leaf.html', 'templates\\result.html', 'templates\\index1.html']
 
 [main]
 version = 0.2.0
