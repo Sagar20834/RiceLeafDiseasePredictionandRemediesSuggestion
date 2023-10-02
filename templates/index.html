@@ -13,6 +13,8 @@
 
     <title>RICE LEAF DISEASE DETECTION AND REMEDIES SUGGESTION</title>
     <script src="header.js"></script>
+    <script src="/static/script.js"></script>
+
     <style>
         * {
             margin: 0px;
@@ -174,8 +176,70 @@
 
 <body>
  <script>addHeader();</script>
+<script src="/static/script.js"></script>
 
-    <header>
+
+<header id="appHeader" style="display: none;">
+        <!-- Display flashed messages -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert alert-danger alert-centered">
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            <div class="alert-buttons">
+                <button class="btn btn-primary" id="ok-button">OK</button>
+                <button class="btn btn-secondary" id="cancel-button">Cancel</button>
+            </div>
+        </div>
+        {% endif %}
+        {% endwith %}
+    </header>
+ 
+
+ <script>
+        // Function to show the header if there are flashed messages
+        function showHeaderIfMessages() {
+            var header = document.getElementById("appHeader");
+            var messages = document.querySelectorAll(".alert li");
+            if (messages.length > 0) {
+                header.style.display = "block";
+            }
+        }
+
+        // Function to hide the header
+        function hideHeader() {
+            var header = document.getElementById("appHeader");
+            header.style.display = "none";
+        }
+
+        // Add event listeners for the "OK" and "Cancel" buttons
+        document.getElementById("ok-button").addEventListener("click", function () {
+            hideHeader();
+            // Scroll to the section containing the "Choose the Rice Leaf Image below" heading
+            document.querySelector('.details').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        document.getElementById("cancel-button").addEventListener("click", function () {
+            hideHeader();
+            // Scroll to the section containing the "Choose the Rice Leaf Image below" heading
+            document.querySelector('.details').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Call the function initially
+        showHeaderIfMessages();
+    </script>
+
+
+
+
+
     
    
         <div class="container-fluid">
@@ -210,10 +274,10 @@
                         <img src="/static/images/img2.jpg" class="d-block w-100" alt="...">
                         <div class="container">
                             <div class="carousel-caption">
-                                <h3>2nd heading 
+                                <h3>RICE LEAF DISEASE DETECTION AND REMEDIES SUGGESTION AI App 
                                 </h3>
                                 <p>
-                                 2nd data introo</p>
+                                 Plant Health Initiative seeks to introduce the app as part of a package of innovations available for integrated pest and disease</p>
 
                             </div>
                         </div>
@@ -226,8 +290,8 @@
                             <div class="container ">
                                 <div class="carousel-caption">
                                     <h3>
-                                    3rd heading</h3>
-                                    <p>3rd data intrtoo  </p>
+                                   RICE LEAF DISEASE DETECTION AND REMEDIES SUGGESTION AI App</h3>
+                                    <p>Keep Your Rice Healthy and Yeild More Crop  </p>
 
                                 </div>
                             </div>
